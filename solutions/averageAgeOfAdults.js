@@ -16,7 +16,16 @@ You do not have to deal with the case, when there are only underage users in the
 */
 
 function averageAgeOfAdults(users) {
-
+  let age = 0;
+  let count = 0;
+  for (const eachUser of users) {
+    
+    if(eachUser.age >= 18) {
+      age += eachUser.age;
+      count++;
+    }
+  }
+  return (age/count);
 }
 
 module.exports = averageAgeOfAdults;
